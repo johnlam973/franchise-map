@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏪 加盟地图管理系统
 
 一个基于 **React + Flask** 的全栈项目，用于管理加盟商信息。支持本地数据存储，无需数据库，适合小型企业或个人使用。
@@ -140,3 +141,7 @@ npm start
 ---
 
 **🎉 项目已成功运行！现在你可以访问 http://localhost:3000 开始使用加盟地图管理系统了！** 
+=======
+# franchise-map
+A web-based application that allows users to visualize and manage the geographic coverage areas of multiple franchise stores. Built with Node.js + Express for backend and Leaflet.js for interactive mapping, the system enables users to input store addresses, assign names and colors, define service radii, and view their impact zones on the map.
+>>>>>>> 2d8bd78a419b5621561b13375bc966a466f3e7af

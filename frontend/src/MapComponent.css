@@ -1,0 +1,228 @@
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+/* 标记弹窗样式 */
+.marker-popup {
+  padding: 0;
+  min-width: 250px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.popup-header {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  margin: -8px -8px 0 -8px;
+}
+
+.store-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+  padding: 12px 16px;
+  background: white;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #555;
+  min-width: 80px;
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: #333;
+  flex: 1;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+/* MapLibre GL 弹窗样式覆盖 */
+.maplibregl-popup-content {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.maplibregl-popup-close-button {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.maplibregl-popup-close-button:hover {
+  color: #333;
+}
+
+/* 地图控件样式 */
+.maplibregl-ctrl-group {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.maplibregl-ctrl-group button {
+  border-radius: 8px;
+}
+
+/* 自定义弹窗样式 */
+.custom-popup .maplibregl-popup-content {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-popup .maplibregl-popup-tip {
+  border-top-color: #FF6B6B;
+}
+
+/* 确保地名标签在地图上清晰可见 */
+.maplibregl-canvas-container {
+  filter: contrast(1.1);
+}
+
+/* 弹窗操作按钮 */
+.popup-actions {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.move-circle-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.move-circle-btn:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #da190b;
+  transform: translateY(-1px);
+}
+
+.reset-circle-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.reset-circle-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.debug-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.debug-btn:hover {
+  background: #138496;
+  transform: translateY(-1px);
+}
+
+/* 圆圈中心标记 */
+.circle-center-marker {
+  background: rgba(76, 175, 80, 0.9);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.circle-center-marker:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px;
+  }
+  
+  .marker-popup {
+    min-width: 200px;
+  }
+  
+  .popup-header {
+    padding: 10px 12px;
+  }
+  
+  .store-name {
+    font-size: 1.1rem;
+  }
+  
+  .popup-content {
+    padding: 10px 12px;
+  }
+  
+  .label {
+    min-width: 70px;
+    font-size: 0.85rem;
+  }
+  
+  .value {
+    font-size: 0.85rem;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+
+} 
